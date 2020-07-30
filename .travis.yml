@@ -20,6 +20,6 @@ deploy:
   app: $herokuapp
   run: 
     - restart
-  skip_cleanup: true
+  cleanup: true
   strategy: git
   
