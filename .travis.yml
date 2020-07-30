@@ -23,3 +23,5 @@ deploy:
   cleanup: true
   strategy: git
   
+notifications:
+  email: false
