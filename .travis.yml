@@ -4,8 +4,22 @@ dist: xenial
 dotnet: 3.1.301
 os: linux
 
+branches:
+  only:
+    - master
+
 install:
   - dotnet restore
 
 script:
   - dotnet build
+    
+deploy:
+  api_key: $herokuapikey
+  provider: heroku
+  app: $herokuapp
+  run: 
+    - restart
+  skip_cleanup: true
+  strategy: git
+  
